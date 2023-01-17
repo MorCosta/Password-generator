@@ -9,5 +9,7 @@ The user just need to navigate to the this link:
 ## Usage
 Once one the page, the user will just need to click on the Generate Password button. Then a prompt will ask the use to select the number of characters they want to use for their password.
 Then they will be asked if they want to use lower, upper, special and numerica characters. Once the user selected his preferences, a random password will be generated.
-![alt text](assets/images/portfolio.png)
+![alt text](assets/images/password-generator.png)
 
+## Credits
+My classmate Sansi, that helped me with the debugging of the code.
