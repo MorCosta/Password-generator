@@ -130,7 +130,7 @@ let specialCharacters = [
   function generatePassword() {
    let password = ""
    for (let i = 0; i < charlenght; i++) {
-   let randomIndex = Math.floor(Math.random() * choiceArr.lenght);
+   let randomIndex = Math.floor(Math.random() * choiceArr.length);
    password = password + choiceArr[randomIndex];
   }
   return password;
