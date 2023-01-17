@@ -1,6 +1,3 @@
-let choiceArr = []
-let charlenght = []
-
 
 // Array of special characters to be included in password
 let specialCharacters = [
@@ -92,10 +89,11 @@ let specialCharacters = [
     'Z'
   ];
   
-
+  let choiceArr = []
+  let charlenght = []
+  
   // Function to prompt user for password options
   function getPasswordOptions() {
-   choiceArr = [];
    charlenght = parseInt (prompt("Choose the number of the characters for your password. Your password can be between 10 and 64 characters long."));
    if (isNaN(charlenght) || charlenght < 10 || charlenght > 64) {
     alert ("Please, select a number between 10 and 64.");
@@ -125,12 +123,11 @@ let specialCharacters = [
   }
 
 
-
   // Function to generate password with user input
   function generatePassword() {
    let password = ""
    for (let i = 0; i < charlenght; i++) {
-   let randomIndex = Math.floor(Math.random() * choiceArr.lenght);
+   let randomIndex = Math.floor(Math.random() * choiceArr.length);
    password = password + choiceArr[randomIndex];
   }
   return password;
@@ -142,10 +139,10 @@ let specialCharacters = [
   
   // Write password to the #password input
   function writePassword() {
-    let correctPrompts = getPasswordOptions();
+    let inputs = getPasswordOptions();
     let passwordText = document.querySelector('#password');
 
-    if(correctPrompts) {
+    if(inputs) {
     let newPassword = generatePassword();
     passwordText.value = newPassword;
     } else {
